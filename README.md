@@ -59,6 +59,24 @@ scp -P 2222 ./build/Clutch root@localhost:/usr/bin/Clutch
 
 When you SSH into your device, run `Clutch`.
 
+## Getting the list of apps 
+```sh 
+root# Clutch -i 
+2018-09-04 14:03:40.010 Clutch[1071:47375] command: Prints installed applications
+Installed apps:
+1:   funGame - fungame <co.fun.app>
+2:   tider - game <co.tinder.app>
+```
+## Gettting the dump from app 
+```sh 
+root# Clutch -d <number that Clutch gave you in the list> 
+example: 
+root# Clutch -d 1
+```
+## Where to find the dumped file
+When successully dump, Clutch will dumped the file in following directory "/private/var/tmp/clutch/"
+If you are dumping quite a bit file just remember folder under clutch dir would be named as UUID string. 
+
 # Licenses
 
 Clutch uses the following libraries under their respective licenses.
